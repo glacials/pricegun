@@ -67,6 +67,8 @@ class App extends React.Component {
                     This tool does not know whether users will pay this for the value they get.
                     <br />
                     That part is up to you. :)
+                    <br />
+                    Read <a href="https://amzn.to/2YEkAMu">How to Price Effectively</a> for help.
                   </small>
                 </i>
               </p>

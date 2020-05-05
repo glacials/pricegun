@@ -37,7 +37,6 @@ export default class Questionnaire extends React.Component {
       [event.target.name]: val
     })
 
-    const weeklyRate = (this.state.opportunityCostDollarsPerYear / 52) * (this.state.hoursPerWeek / 40)
     const monthlyRate = (this.state.opportunityCostDollarsPerYear / 12) * (this.state.hoursPerWeek / 40)
     const monthlyCosts = this.state.hostingDollarsPerMonthFixed + (this.state.hostingDollarsPerMonthVariable / 1000 * this.state.numUsers)
     const costPerUser = (monthlyRate + monthlyCosts) / this.state.numUsers
