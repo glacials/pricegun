@@ -16,7 +16,7 @@ build_targets:
     commands:
       - yarn install
       - yarn build
-      - git add dist
+      - git add build
       - git -c "user.name=YourBase" -c "user.email=ben@yourbase.io" commit -m 'Automatic build by YourBase' --allow-empty
       - ./yourbase_helper.sh
     environment:
