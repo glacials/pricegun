@@ -38,7 +38,7 @@ class App extends React.Component {
             <Col md={12} className="text-center">
               <img src="logo.png" width="300" alt="Pricegun logo" />
               <p>
-                Estimate how much you should charge for your SaaS side project.
+                Estimate how much to charge for your SaaS side project.
                 <br />
                 <small><i>No information leaves your computer.</i></small>
               </p>
