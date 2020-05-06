@@ -10,7 +10,7 @@ export default class Questionnaire extends React.Component {
       hoursPerWeek: 10,
       hostingDollarsPerMonthFixed: 100,
       hostingDollarsPerMonthVariable: 100,
-      conversionRate: 0.01,
+      conversionRate: 0.1,
       opportunityCostDollarsPerYear: 100000,
       margin: 0.2,
       numUsers: 1000,
@@ -93,7 +93,7 @@ export default class Questionnaire extends React.Component {
             What percentage of users will pay?
           </Form.Label>
           <InputGroup>
-            <Form.Control type="text" placeholder="1" name="conversionRate" onChange={this.handleChange}  />
+            <Form.Control type="text" placeholder="10" name="conversionRate" onChange={this.handleChange}  />
             <InputGroup.Append>
               <InputGroup.Text>%</InputGroup.Text>
             </InputGroup.Append>
