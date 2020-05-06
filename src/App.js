@@ -8,6 +8,8 @@ import Col from 'react-bootstrap/Col'
 
 import Questionnaire from './Questionnaire.js'
 
+require('jsesc')
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -38,7 +40,7 @@ class App extends React.Component {
             <Col md={12} className="text-center">
               <img src="logo.png" width="300" alt="Pricegun logo" />
               <p>
-                Estimate how much to charge for your SaaS side project.
+                Estimate the minimum you should charge for your SaaS side project.
                 <br />
                 <small><i>No information leaves your computer.</i></small>
               </p>
@@ -51,7 +53,7 @@ class App extends React.Component {
               <Questionnaire onFormChange={this.handleFormChange} />
             </Col>
             <Col md={6} className="text-center">
-              <h5>You should charge users</h5>
+              <h5>You should charge users at least</h5>
               <h1>${this.state.pricePerUser.toLocaleString(navigator.language, {minimumFractionDigits: 0, maximumFractionDigits: 0})} per month</h1>
               <h5>Explanation:</h5>
               Your rate: ${this.state.monthlyRate.toLocaleString(navigator.language, {minimumFractionDigits: 0, maximumFractionDigits: 0})} per month
@@ -68,10 +70,8 @@ class App extends React.Component {
               <p>
                 <i>
                   <small>
-                    Unknown whether your product is worth this to your users.
-                    <br />
-                    That part is up to you. :)
-                    <br />
+                    This is an estimated minimum.<br />
+                    You may want to charge more based on demand.<br />
                     Read <a href="https://amzn.to/2YEkAMu">How to Price Effectively</a> for more.
                   </small>
                 </i>
