@@ -16,8 +16,6 @@ build_targets:
     commands:
       - yarn install
       - yarn build
-      - git add -f build
-      - git -c "user.name=YourBase" -c "user.email=ben@yourbase.io" commit -m 'Automatic build by YourBase' --allow-empty
       - ./yourbase_helper.sh
     environment:
       - NODE_ENV=production

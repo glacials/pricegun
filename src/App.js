@@ -36,7 +36,7 @@ class App extends React.Component {
         <Jumbotron className="pb-0" style={{backgroundColor: '#fafafa'}}>
           <Row>
             <Col md={12} className="text-center">
-              <img src="logo.png" width="300" />
+              <img src="logo.png" width="300" alt="Pricegun logo" />
               <p>
                 Estimate how much you should charge for your SaaS side project.
                 <br />
