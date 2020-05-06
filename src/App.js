@@ -33,13 +33,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Jumbotron>
-          <h1>Price My Product</h1>
-            <p>
-              Find out how much you should charge for your side project.
-              <br />
-              <i>No information leaves your computer.</i>
-            </p>
+        <Jumbotron className="pb-0" style={{backgroundColor: '#fafafa'}}>
+          <Row>
+            <Col md={12} className="text-center">
+              <img src="logo.png" width="300" />
+              <p>
+                Estimate how much you should charge for your SaaS side project.
+                <br />
+                <small><i>No information leaves your computer.</i></small>
+              </p>
+            </Col>
+          </Row>
         </Jumbotron>
         <Container>
           <Row>
@@ -64,11 +68,11 @@ class App extends React.Component {
               <p>
                 <i>
                   <small>
-                    This tool does not know whether users will pay this for the value they get.
+                    Unknown whether your product is worth this to your users.
                     <br />
                     That part is up to you. :)
                     <br />
-                    Read <a href="https://amzn.to/2YEkAMu">How to Price Effectively</a> for help.
+                    Read <a href="https://amzn.to/2YEkAMu">How to Price Effectively</a> for more.
                   </small>
                 </i>
               </p>
