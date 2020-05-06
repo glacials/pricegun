@@ -7,15 +7,13 @@
 # git subtree push --prefix build https://glacials:${GITHUB_TOKEN}@github.com/glacials/pricegun gh-pages
 
 mkdir -p build
-cd build
-git init
-git remote add origin https://glacials:${GITHUB_TOKEN}@github.com/glacials/pricegun
-git pull --force
-cd ../
 yarn install
 yarn build
 cd build
+git init
+git remote add origin https://glacials:${GITHUB_TOKEN}@github.com/glacials/pricegun
+git checkout -b gh-pages
 git add .
 git -c 'user.name=YourBase' -c 'user.email=ben@yourbase.io' commit -am 'Automatic deploy by YourBase'
-git push
+git push origin gh-pages --force
 cd ../
