@@ -1,6 +1,6 @@
 #!/bin/sh
 
-git push origin `git subtree split --prefix build master`:gh-pages --force
+git push https://glacials:${GITHUB_TOKEN}@github.com/glacials/pricegun.git `git subtree split --prefix build master`:gh-pages --force
 
 # Other solution
 # cd build
