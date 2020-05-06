@@ -14,6 +14,7 @@ build_targets:
       - NODE_ENV=development
   - name: deploy
     commands:
+      - git subtree pull --prefix build https://github.com/glacials/pricegun gh-pages
       - yarn install
       - yarn build
       - git add build
