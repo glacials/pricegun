@@ -79,8 +79,6 @@ class App extends React.Component {
               <div className="mx-auto my-5">
                 <small>
                   <i>by Ben Carlsson @ <a href="https://twos.dev">twos.dev</a></i>
-                  <br />
-                  <i>Ship code faster with consistency across all teams @ <a href="https://yourbase.io">YourBase</a></i>
                 </small>
               </div>
             </Col>
