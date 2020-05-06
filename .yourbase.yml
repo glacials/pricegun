@@ -16,6 +16,8 @@ build_targets:
     commands:
       - yarn install
       - yarn build
+      - git add build
+      - git -c "user.name=YourBase" -c "user.email=ben@yourbase.io" commit -am 'Deploy by YourBase'
       - ./yourbase_helper.sh
     environment:
       - NODE_ENV=production
