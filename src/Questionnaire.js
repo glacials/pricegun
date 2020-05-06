@@ -10,7 +10,7 @@ export default class Questionnaire extends React.Component {
       hoursPerWeek: 10,
       hostingDollarsPerMonthFixed: 100,
       hostingDollarsPerMonthVariable: 100,
-      conversionRate: 0.5,
+      conversionRate: 0.01,
       opportunityCostDollarsPerYear: 100000,
       margin: 0.2,
       numUsers: 1000,
