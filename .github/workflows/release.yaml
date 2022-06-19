@@ -19,6 +19,7 @@ jobs:
           rm -rf dist
           mkdir -p dist
           yarn install
+          yarn build
           cd dist
           git init
           git remote add origin https://glacials:${GITHUB_TOKEN}@github.com/glacials/pricegun
