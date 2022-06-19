@@ -1,31 +1,28 @@
 # Pricegun
-Pricegun helps you estimate how much you should charge users for your SaaS side project.
+
+Pricegun helps you estimate how much you need to charge users for your SaaS side
+project to break even.
 
 ## Development
 
 ### Dependencies
-- [`yarn`][yarn]
-- [`yb`][yb]
 
-[yb]: https://github.com/yourbase/yb
+- [`yarn`][yarn]
+
 [yarn]: https://github.com/yarnpkg/yarn
 
 ### Build and test
+
 ```
-yb build
+yarn install
 ```
 
 ### Run
+
 ```
-yb exec
+react-scripts start
 ```
 
 ### Deploy
-Deploys to GitHub Pages happen automatically on push to `master` via [YourBase][yourbase], but with a [GitHub `repo`
-token][token] in `GITHUB_TOKEN` you can initiate one manually with
-```sh
-yb build deploy
-```
 
-[yourbase]: https://yourbase.io
-[token]: https://github.com/settings/tokens
+Deploys to GitHub Pages happen automatically on pushes to `main`.
