@@ -59,14 +59,19 @@ export default class Questionnaire extends React.Component {
     return (
       <Form>
         <Form.Group>
-          <Form.Label>How many hours per week do you work on it?</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="10"
-            name="hoursPerWeek"
-            onChange={this.handleChange}
-            autoFocus
-          />
+          <Form.Label>How much do you want to work on it?</Form.Label>
+          <InputGroup>
+            <Form.Control
+              type="text"
+              placeholder="10"
+              name="hoursPerWeek"
+              onChange={this.handleChange}
+              autoFocus
+            />
+            <InputGroup.Append>
+              <InputGroup.Text>hours per week</InputGroup.Text>
+            </InputGroup.Append>
+          </InputGroup>
         </Form.Group>
         <Form.Group>
           <Form.Label>
@@ -87,12 +92,12 @@ export default class Questionnaire extends React.Component {
             </InputGroup.Append>
           </InputGroup>
           <Form.Text>
-            i.e. how much would it cost you to stay online even with zero users?
+            i.e. how much would it cost to run with zero users?
           </Form.Text>
         </Form.Group>
         <Form.Group>
           <Form.Label>
-            What are your <b>variable</b> costs, per 1k users?
+            What are your <b>variable</b> costs?
           </Form.Label>
           <InputGroup>
             <InputGroup.Prepend>
@@ -105,9 +110,10 @@ export default class Questionnaire extends React.Component {
               onChange={this.handleChange}
             />
             <InputGroup.Append>
-              <InputGroup.Text>per month</InputGroup.Text>
+              <InputGroup.Text>per month per 1k users</InputGroup.Text>
             </InputGroup.Append>
           </InputGroup>
+          <Form.Text>Use your best guess.</Form.Text>
         </Form.Group>
         <Form.Group>
           <Form.Label>What percentage of users will pay?</Form.Label>
@@ -153,6 +159,10 @@ export default class Questionnaire extends React.Component {
               <InputGroup.Text>%</InputGroup.Text>
             </InputGroup.Append>
           </InputGroup>
+          <Form.Text>
+            i.e. after your labor and costs are paid for, how much more do you
+            want as profit?
+          </Form.Text>
         </Form.Group>
         <Form.Group>
           <Form.Label>How many users will you have?</Form.Label>
