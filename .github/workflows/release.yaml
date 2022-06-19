@@ -16,21 +16,13 @@ jobs:
         env:
           NODE_ENV: production
         run: |
-          rm -rf dist
-          mkdir -p dist
+          rm -rf build
+          mkdir -p build
           yarn install
           yarn build
-          cd dist
-          git init
-          git remote add origin https://glacials:${GITHUB_TOKEN}@github.com/glacials/pricegun
-          git checkout -b gh-pages
-          git add .
-          git -c 'user.name=glacials' -c 'user.email=ben@twos.dev' commit -am 'Automatic deploy'
-          git push origin gh-pages --force
-          cd ../
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.3.3
         with:
           branch: gh-pages
-          folder: dist
+          folder: build
